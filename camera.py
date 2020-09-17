@@ -14,6 +14,8 @@ class VideoCamera(object):
         self.video.release()
 
     def get_frame(self):
+
+        # Detect and Capture Fix
         success, image = self.video.read()
         with open('Names.txt', 'r') as f:
             student_name = f.read()

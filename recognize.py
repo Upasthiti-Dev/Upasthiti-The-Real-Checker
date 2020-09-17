@@ -6,6 +6,11 @@ from scipy.spatial.distance import cosine
 from mtcnn.mtcnn import MTCNN
 from keras_vggface.vggface import VGGFace
 from keras_vggface.utils import preprocess_input
+import pandas as pd
+
+col_names = ['Name','Faculty Number', 'Status']
+#data-frame
+df = pd.read_csv("data.csv", usecols=col_names, index_col=col_names[0])
 
 # extract a single face from a given photograph
 def extract_face(filename, required_size=(224, 224)):
@@ -65,9 +70,4 @@ def verification():
 	# verify known photos of sharon
 	#print('Positive Tests')
 	is_match(embeddings[0], embeddings[1], student_name)
-	# is_match(embeddings[0], embeddings[2])
-	# is_match(embeddings[0], embeddings[5])
-	# # verify known photos of other people
-	#print('Negative Tests')
-	# is_match(embeddings[0], embeddings[3])
-	# is_match(embeddings[0], embeddings[4])
+

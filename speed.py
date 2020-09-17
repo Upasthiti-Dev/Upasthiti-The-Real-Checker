@@ -1,8 +1,12 @@
-# Python program to test
-# internet speed
+# Internet Speed Test
 
 import speedtest
-
+count = 0
 def get_speed():
-    st = speedtest.Speedtest()
-    return st.download()
+    try:
+        st = speedtest.Speedtest()
+        result = st.download()
+        return result
+    except:
+        result = -1
+        return result
