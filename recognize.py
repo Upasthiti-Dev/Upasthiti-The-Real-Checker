@@ -11,6 +11,7 @@ import pandas as pd
 col_names = ['Name','Faculty Number', 'Status']
 #data-frame
 df = pd.read_csv("data.csv", usecols=col_names, index_col=col_names[0])
+message = ""
 
 # extract a single face from a given photograph
 def extract_face(filename, required_size=(224, 224)):
@@ -51,10 +52,12 @@ def is_match(known_embedding, candidate_embedding, name, thresh=0.5):
 	score = cosine(known_embedding, candidate_embedding)
 	if score <= thresh:
 		print('>face is a Match (%.3f <= %.3f)' % (score, thresh))
-		print('Thank you! '+ name + ". Marked Present!")
+		message = 'Thank you! '+ name + ". Marked Present!"
+		print(message)
 	else:
 		print('>face is NOT a Match (%.3f > %.3f)' % (score, thresh))
-		print('Oops! Seems its NOT YOU :(!')
+		message = 'Oops! Seems its NOT YOU :('
+		print(message)
 
 def verification():
 

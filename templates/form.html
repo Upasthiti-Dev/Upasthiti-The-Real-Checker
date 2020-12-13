@@ -1,18 +1,120 @@
-<!DOCTYPE html>
+<html>
+
 <head>
     <title>UPASTHITI</title>
-    <script src="https://unpkg.com/scrollreveal@4"></script>
-{#    <link href="../static/styles/styles.css" rel="stylesheet" type="text/css"/>#}
-{#          <link rel="icon" type="image/png" href="static/logo.png" />#}
-
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<body class=bg>
-<h1 class="heading1">ADD NAME</h1>
-<section id="form" class="try">
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+.landing-page {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/121761/pattern_(3).svg");
+  background-size: auto;
+  {#margin-bottom: 60px;#}
+
+  /* CENTER TITLE Y */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* CENTER TITLE X */
+  align-items: center;
+  height: 100vh;
+}
+
+h1,h3 {
+  font-family: Roboto;
+  color: #fff;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+p {
+  max-width: 960px;
+  margin: 0 auto 20px;
+  padding: 0px 5%;
+  font-family: Roboto;
+  line-height: 1.6em;
+  color: #5A5A5A;
+}
+.text-content {
+  margin-bottom: 100px;
+}
+    body{
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+    .title{
+        animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    }
+
+    @keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }
+}
+ .card-title{
+     background-color: white;
+     color: black;
+ }
+.card-header{
+    color: #51ab4c;
+}
+
+</style>
+
+<body>
+
+<section class="landing-page">
+  <h1 class="title">UPASTHITI</h1>
+    <h3>The Real Tracker</h3>
+        <div class="card border-success mb-3" style="max-width: 18rem;">
+  <div class="card-header">TIME TO GO LIVE</div>
+  <div class="card-body text-success">
+    <h5 class="card-title">Name</h5>
     <form method="POST" action="/form_check">
-        <input type="text" required="required" name="Name" placeholder=" Enter your Full Name"><br><br>
-        <input type="submit" value="Take Me Live!!"></form>
+  <div class="form-group">
+      <input required="required" name="Name" class="form-control" type="text" placeholder="Enter Full Name">
+  </div>
+
+  <div class="input-group-append">
+    <button class="btn btn-success" type="submit">GO LIVE!</button>
+  </div>
+        </form>
+</div>
+  </div>
+</div>
+
 </section>
-<script> ScrollReveal().reveal('.try');
-ScrollReveal().reveal('.heading1');</script>
-<br>
+
+
+
+<!-------------------------------ADD NAME------------------------->
+{#<h1 class="heading1">ADD NAME</h1>#}
+{#<section id="form" class="try">#}
+{#    <form method="POST" action="/form_check">#}
+{#        <input type="text" required="required" name="Name" placeholder=" Enter your Full Name"><br><br>#}
+{#        <input type="submit" value="Take Me Live!!"></form>#}
+{#</section>#}
+</body>
+</html>

@@ -1,28 +1,88 @@
-
-<html>
+<!DOCTYPE html>
   <head>
     <title>Mod1</title>
-    <style>
-	img {
-  	display: block;
-  	margin-left: auto;
-  	margin-right: auto;
-	width: 35%
-	}
-    </style>
   </head>
+
+<style>
+
+    .bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, rgb(99, 219, 209) 50%, rgb(42, 44, 46) 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+ @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+    body{
+        text-align: center;
+        color: white;
+        font-family: Roboto, sans-serif;
+    }
+
+    img{
+        display: block;
+  	    margin-left: auto;
+  	    margin-right: auto;
+	    width: 50%;
+        height: 50%;
+    }
+
+    .guideline{
+        background-color: green;
+    }
+
+    .alert{
+        color: whitesmoke;
+        font-size: 60px;
+        display: block;
+    }
+
+</style>
+
   <script>
       setTimeout(function(){
           document.getElementById('confirm')
       },10000)
+
   </script>
   <body>
-    <h1 align="center">Video Streaming Demonstration</h1>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+    <div class="alert">FACE ATTENDANCE IS LIVE</div>
+<h2 class="guideline">STAY STILL AND FACE TOWARDS THE CAMERA </h2><h2 class="guideline">UNTIL THE GREEN SQUARE MARK OCCURS!</h2>
 {#    <img id="bg" class="center" src="{{ url_for('video_feed') }}">#}
-    <img id="bg" class="center" src="{{ url_for('video_feed') }}">
+    <img class="center" src="{{ url_for('video_feed') }}">
+
     {% if show  %}
     <h3>VIDEO ENDED!!</h3>
     {% endif %}
-    <h5 id="confirm"></h5>
+
+    <a type="button" href="{{ url_for('form') }}" >HOME</a>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+
   </body>
 </html>

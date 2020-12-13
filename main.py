@@ -1,7 +1,7 @@
 from flask import Flask, render_template, Response, request, redirect, url_for
 from camera import VideoCamera
 import datetime
-from recognize import verification
+import recognize as rcg
 import pandas as pd
 from speed import get_speed
 
@@ -26,6 +26,7 @@ def redirection():
 @app.route('/speed-check')
 def speed():
     download_sp = get_speed()
+    # return redirect('/form')
     if download_sp%1000000 >= 2.0 and download_sp!=-1:
         print(download_sp%1000000)
         return redirect('/form')
@@ -73,18 +74,23 @@ def index():
 
 def gen(camera):
     endTime = datetime.datetime.now() + datetime.timedelta(seconds=10)
+
     while datetime.datetime.now() < endTime:
+
         frame = camera.get_frame()
         yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
+
     show = True
-    verification()
+    rcg.verification()
 
 # Sixth Route
 # >>> Starts Video Feed
 @app.route('/video_feed')
+
 def video_feed():
     return Response(gen(VideoCamera()),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
+
 
 # Run app at Host 0.0.0.0
 if __name__ == '__main__':

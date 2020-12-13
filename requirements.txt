@@ -1,0 +1,12 @@
+tensorflow
+numpy
+pandas
+scipy
+pip install Keras-Applications
+pip install pillow
+pandas
+opencv-python
+pip install mtcnn
+pip install matplotlib
+pip install git+https://github.com/rcmalli/keras-vggface.git
+
