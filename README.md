@@ -30,6 +30,64 @@ If you are lying, we caught you again! We have a bandwidth check!
 
 Sounds interesting? Do you find some other flaws? Then create an issue and let’s discuss!
 
+## Usage
+
+Once done with the project setup, open the project in an [**IDE**](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments); for example - [**PyCharm**](https://www.jetbrains.com/pycharm/), [**Visual Studio Code**](https://code.visualstudio.com/), etc.
+
+
+**NOTE** : ***Be sure to select appropriate interpreter. Sometimes it may get deselected.***
+
+### From Command Line Interface
+
+* Create Virtual Environment
+```
+pip install virtualenv
+
+python -m virtualenv myenv
+```
+### Mac / Linux User
+```
+source myenv/bin/activate
+```
+### Windows Users
+```
+myenv\Scripts\activate
+```
+
+* Head to the project directory containing ```main.py```
+
+* Open Terminal(Mac/Linux)/Command Prompt (Windows) there.
+
+* Follow accordingly :arrow_down:
+
+  1. **Unix Bash (Linux, Mac, etc.):**
+  ```
+  $ export FLASK_APP=main.py
+  $ flask run
+  ```
+  2. **Windows CMD:**
+  ```
+  > set FLASK_APP=main.py
+  > flask run
+  ```
+  3. **Windows PowerShell:**
+   ```
+  > $env:FLASK_APP = "1"
+  > flask run
+  ```
+* ### Output:
+```
+ $ flask run
+ Serving Flask app "hello"
+ Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+```
+
+ * Copy `http://127.0.0.1:5000/` and open it in a browser and Voila!
+
+> ***Without using shell***
+> 1. Open `main.py`
+> 2. Hit `Run`, if using any IDE as mentioned above.
+
 ## WHO CAN CONTRIBUTE? 
 Upasthiti is an open source project. If you are a frontend hero or a backend ninja or  a pythonic head or a javascript lover , UPASTHITI has something for everyone!
 
