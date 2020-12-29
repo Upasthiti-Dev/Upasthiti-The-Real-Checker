@@ -2,6 +2,8 @@
 
 <p align="center">
  <img src="Logo/Upasthiti.gif" /> <br>
+ <a href="https://github.com/TesseractCoding/NeoAlgo/blob/master/LICENSE" target="_blank"><img src="https://img.shields.io/github/license/tesseractcoding/neoalgo?style=for-the-badge" /></a> <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge" alt="PRs Welcome" /> <img src="https://img.shields.io/github/issues/Upasthiti-Dev/Upasthiti-The-Real-Checker?style=for-the-badge"> <img src="https://img.shields.io/github/forks/Upasthiti-Dev/Upasthiti-The-Real-Checker?style=for-the-badge"> <img src="https://img.shields.io/github/stars/Upasthiti-Dev/Upasthiti-The-Real-Checker?style=for-the-badge">
+ 
  </p>
 
 ## OVERVIEW
