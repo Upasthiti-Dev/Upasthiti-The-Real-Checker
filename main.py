@@ -27,7 +27,8 @@ def redirection():
 def speed():
     download_sp = get_speed()
     # return redirect('/form')
-    if download_sp%1000000 >= 2.0 and download_sp!=-1:
+    #if download_sp%1000000 >= 0.0 and download_sp!=-1:
+    if True:
         print(download_sp%1000000)
         return redirect('/form')
     else:

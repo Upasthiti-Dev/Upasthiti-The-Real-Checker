@@ -1,12 +1,15 @@
-tensorflow
-numpy
-pandas
-scipy
-pip install Keras-Applications
-pip install pillow
-pandas
-opencv-python
-pip install mtcnn
-pip install matplotlib
-pip install git+https://github.com/rcmalli/keras-vggface.git
-
+Flask==1.1.2
+h5py==2.10.0
+Keras==2.4.3
+Keras-Applications==1.0.8
+Keras-Preprocessing==1.1.2
+keras-vggface @ git+https://github.com/rcmalli/keras-vggface.git@719ad75625fe51436b9a9479114b3d136847e11a
+matplotlib==3.3.3
+mtcnn==0.1.0
+numpy==1.19.4
+opencv-python==4.4.0.46
+pandas==1.2.0
+Pillow==8.0.1
+scipy==1.5.4
+speedtest==0.0.1
+tensorflow==2.4.0
