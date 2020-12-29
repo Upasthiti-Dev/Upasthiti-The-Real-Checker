@@ -51,4 +51,4 @@ https://github.com/Upasthiti-Dev/Upasthiti-The-Real-Checker/blob/master/CODE_OF_
 https://github.com/Upasthiti-Dev/Upasthiti-The-Real-Checker/blob/master/LICENSE
 
 ## CONTACT US HERE
-https://meet.google.com/linkredirect?authuser=0&dest=https%3A%2F%2Flinktr.ee%2FThe_Upasthiti_team
+https://linktr.ee/The_Upasthiti_team
