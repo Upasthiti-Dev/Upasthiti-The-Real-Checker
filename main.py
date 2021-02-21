@@ -31,8 +31,7 @@ def speed():
     if True:
         print(download_sp%1000000)
         return redirect('/form')
-    else:
-        return render_template("error.html")
+    return render_template("error.html")
 
 # third route
 # >>> Renders a form for entering Name of Student
@@ -55,11 +54,8 @@ def name():
                 with open("Names.txt", 'w') as f:
                     f.write(Name)
                 return redirect(url_for('index'))
-
-            # return to the form page if Name not found
-            else:
-                print("Name not Found")
-                return redirect(url_for('form'))
+            print("Name not Found")
+            return redirect(url_for('form'))
 
         # In case of any error return to the SpeedTest
         except:
