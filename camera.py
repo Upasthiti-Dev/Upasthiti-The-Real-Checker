@@ -1,5 +1,4 @@
 import cv2
-import time
 
 
 face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_alt2.xml")
