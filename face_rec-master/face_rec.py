@@ -1,7 +1,6 @@
 import os
 import cv2
 import face_recognition
-import numpy as np
 from tqdm import tqdm
 from collections import defaultdict
 from imutils.video import VideoStream

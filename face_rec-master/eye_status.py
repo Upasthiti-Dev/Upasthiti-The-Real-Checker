@@ -1,6 +1,4 @@
-import os
 from PIL import Image
-import numpy as np
 
 from keras.models import Sequential
 from keras.layers import Conv2D
@@ -9,9 +7,7 @@ from keras.layers import Flatten
 from keras.layers import Dense
 from keras.models import model_from_json
 from keras.preprocessing.image import ImageDataGenerator
-
-from scipy.ndimage import imread
-from scipy.misc import imresize, imsave
+from scipy.misc import imresize
 
 IMG_SIZE = 24
 
