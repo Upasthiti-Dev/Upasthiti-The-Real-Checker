@@ -1,4 +1,4 @@
-Flask==1.1.2
+Flask==2.3.2
 h5py==2.10.0
 Keras==2.4.3
 Keras-Applications==1.0.8
